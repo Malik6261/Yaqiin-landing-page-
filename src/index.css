@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #0B1F3A;
+  --color-navy-light: #153154;
+  --color-teal: #5A9FA4;
+  --color-teal-light: #76BFC5;
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-white font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
