@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <!-- Brand Color: #FE7D08 -->
+  <defs>
+    <style>
+      .text {
+        font-family: 'Space Grotesk', system-ui, sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        fill: #FE7D08;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+
+  <!-- The Bird/Y Icon Shape -->
+  <g transform="translate(10, 10)">
+    <!-- Arc representing the left wing of the Y -->
+    <path d="M 0,20 C 30,20 60,50 60,95 C 40,80 20,40 0,60 Z" fill="#FE7D08" />
+    
+    <!-- Swoop representing the right part of the Y -->
+    <path d="M 85,0 C 70,20 50,40 40,60 C 50,75 55,85 55,100 C 65,80 85,50 110,20 C 100,10 90,0 85,0 Z" fill="#FE7D08" />
+    
+    <!-- Bird head in negative space by drawing the orange around it, or just drawing an orange shape for the head -->
+    <path d="M 40,25 C 50,20 60,25 65,35 C 55,30 45,35 40,25 Z" fill="#FE7D08" />
+  </g>
+
+  <!-- The "aqiin" Text -->
+  <text x="110" y="90" class="text">aqiin</text>
+</svg>

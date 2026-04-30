@@ -149,7 +149,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center">
             <img
-              src="/logo.png"
+              src="/logo.svg"
               alt="Yaqiin Logistics"
               className="h-8 md:h-10 w-auto"
             />
@@ -424,7 +424,7 @@ export default function App() {
             <div>
               <div className="flex items-center mb-6">
                 <img
-                  src="/logo.png"
+                  src="/logo.svg"
                   alt="Yaqiin Logistics"
                   className="h-10 md:h-12 w-auto"
                 />
