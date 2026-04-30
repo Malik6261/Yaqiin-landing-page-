@@ -79,8 +79,8 @@ const ProcessStep = ({ num, title, desc }: any) => (
   </div>
 );
 
-const TariffCard = ({ icon: Icon, title, time, desc }: any) => (
-  <div className="glass-panel p-8 rounded-[2rem] group relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(254,125,8,0.1)] transition-all duration-500 cursor-pointer flex flex-col h-full border border-white/5 hover:border-brand/30">
+const TariffCard = ({ icon: Icon, title, time, desc, onClick }: any) => (
+  <div onClick={onClick} className="glass-panel p-8 rounded-[2rem] group relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(254,125,8,0.1)] transition-all duration-500 cursor-pointer flex flex-col h-full border border-white/5 hover:border-brand/30">
     <div className="absolute inset-0 bg-gradient-to-b from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand/20 transition-all duration-500">
       <Icon className="w-6 h-6 text-brand" />
@@ -95,17 +95,13 @@ const TariffCard = ({ icon: Icon, title, time, desc }: any) => (
       {desc}
     </p>
     <div className="flex items-center text-sm font-medium text-text-muted group-hover:text-brand transition-colors">
-      Batafsil{" "}
-      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+      Batafsil
     </div>
   </div>
 );
 
 const Testimonial = ({ quote, name, role }: any) => (
-  <div className="glass-panel p-8 rounded-[2rem] flex flex-col justify-between h-full relative overflow-hidden group hover:bg-white/[0.08] transition-colors duration-500 border-white/5 hover:border-white/10">
-    <div className="flex text-brand absolute top-6 right-6 opacity-10 group-hover:opacity-100 group-hover:rotate-12 transition-all duration-700">
-      <Star fill="currentColor" className="w-16 h-16" />
-    </div>
+  <div className="glass-panel p-8 rounded-[2rem] flex flex-col justify-between h-full relative overflow-hidden group hover:bg-white/[0.1] transition-colors duration-500 border-white/5 hover:border-white/30">
     <p className="text-lg md:text-xl text-white font-light leading-relaxed z-10 relative mb-8">
       "{quote}"
     </p>
@@ -323,6 +319,7 @@ export default function App() {
                 title="Avia"
                 time="5-7 kun"
                 desc="Tezkor yetkazib berish, shoshilinch biznes ehtiyojlari uchun optimal tanlov."
+                onClick={openForm}
               />
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -331,6 +328,7 @@ export default function App() {
                 title="Tezkor"
                 time="2-3 kun"
                 desc="Kichik va o'ta shoshilinch yuklarni yashin tezligida yetkazamiz."
+                onClick={openForm}
               />
             </FadeIn>
             <FadeIn delay={0.3}>
@@ -339,6 +337,7 @@ export default function App() {
                 title="Avto"
                 time="12-22 kun"
                 desc="Eng hamyonbop, arzon va O'zbekistonda keng tarqalgan tanlov."
+                onClick={openForm}
               />
             </FadeIn>
             <FadeIn delay={0.4}>
@@ -347,6 +346,7 @@ export default function App() {
                 title="Temiryo'l"
                 time="25-30 kun"
                 desc="Katta hajmli va og'ir yuklar (Bulk cargo) uchun xavfsiz va ishonchli."
+                onClick={openForm}
               />
             </FadeIn>
           </div>
