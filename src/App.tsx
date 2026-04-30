@@ -418,49 +418,65 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="pt-20 pb-10 px-6 border-t border-white/5 relative z-10">
+      <footer className="pt-24 pb-10 px-6 border-t border-white/10 relative z-10 bg-navy mt-10">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent"></div>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
-            <div>
-              <div className="flex items-center mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-16">
+            {/* Left side: Info */}
+            <div className="flex flex-col">
+              <div className="mb-8">
                 <img
                   src="/logo.svg"
                   alt="Yaqiin Logistics"
                   className="h-10 md:h-12 w-auto"
                 />
               </div>
-              <p className="text-text-secondary font-light leading-relaxed mb-6">
-                Xitoydan O'zbekistonga ishonchli va premium logistika xizmati.
-                Biznesingiz biz bilan xavfsiz qo'llarda.
+              <p className="text-text-secondary text-lg font-light leading-relaxed mb-8 max-w-md">
+                Xitoydan O'zbekistonga ishonchli va premium logistika xizmati. Biznesingiz biz bilan xavfsiz qo'llarda.
               </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 mt-auto">
+                <a
+                  href="tel:+998971759797"
+                  className="flex items-center gap-3 text-white hover:text-brand transition-colors font-medium"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:border-brand/30 hover:bg-brand/10 transition-all">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  +998 97 175 97 97
+                </a>
+                <a
+                  href="https://t.me/yaqiin"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3 text-white hover:text-brand transition-colors font-medium"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:border-brand/30 hover:bg-brand/10 transition-all">
+                    <Send className="w-5 h-5" />
+                  </div>
+                  Telegram orqali yozish
+                </a>
+              </div>
             </div>
-            <div>
-              <h4 className="text-lg font-medium mb-6 text-white">
-                Bog'lanish
-              </h4>
-              <ul className="space-y-4 text-text-secondary font-light">
-                <li>
-                  <a
-                    href="tel:+998971759797"
-                    className="hover:text-brand transition-colors flex items-center gap-2"
-                  >
-                    <Phone className="w-4 h-4" /> +998 97 175 97 97
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://t.me/yaqiin"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-brand transition-colors flex items-center gap-2"
-                  >
-                    <Send className="w-4 h-4" /> Telegram: @yaqiin
-                  </a>
-                </li>
-              </ul>
+
+            {/* Right side: CTA Block */}
+            <div className="bg-gradient-to-br from-white/[0.03] to-transparent border border-white/10 rounded-[2rem] p-8 md:p-12 relative overflow-hidden group">
+               <div className="absolute top-0 right-0 w-64 h-64 bg-brand/10 blur-[100px] rounded-full pointer-events-none transition-opacity duration-700 group-hover:opacity-100 opacity-60"></div>
+               <h3 className="text-3xl md:text-4xl font-display font-medium text-white mb-4 relative z-10">Yukingizni jo’natishga tayyormisiz?</h3>
+               <p className="text-text-secondary font-light text-lg mb-8 max-w-sm relative z-10">
+                 Tafsilotlarni qoldiring va biznesingiz uchun eng zo'r taklifni oling.
+               </p>
+               <Button
+                  variant="primary"
+                  onClick={openForm}
+                  className="w-full sm:w-auto text-lg pt-4 pb-4 px-10 relative z-10 shadow-brand/20 hover:shadow-brand/40"
+                >
+                  Tarifni hisoblash
+                </Button>
             </div>
           </div>
-          <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-text-muted text-sm font-light">
+          
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-text-muted text-sm font-light">
             <div>
               © {new Date().getFullYear()} Yaqiin Logistics. Barcha huquqlar
               himoyalangan.
