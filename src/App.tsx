@@ -147,7 +147,7 @@ export default function App() {
             <img
               src="/logo.svg"
               alt="Yaqiin Logistics"
-              className="h-8 md:h-10 w-auto"
+              className="h-8 md:h-9 w-auto object-contain flex-shrink-0"
             />
           </div>
           <div className="hidden md:flex gap-4">
@@ -428,7 +428,7 @@ export default function App() {
                 <img
                   src="/logo.svg"
                   alt="Yaqiin Logistics"
-                  className="h-10 md:h-12 w-auto"
+                  className="h-10 md:h-12 w-auto object-contain flex-shrink-0"
                 />
               </div>
               <p className="text-text-secondary text-lg font-light leading-relaxed mb-8 max-w-md">
