@@ -399,12 +399,10 @@ export default function App() {
         <div className="relative z-10 max-w-4xl mx-auto text-center glass-panel p-10 md:p-20 rounded-[3rem] border border-white/20 shadow-2xl">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-display font-medium tracking-tight mb-6">
-              Yukingizni qachon yetkazish kerak?
+              Yukingizni tez va aniq yetkazamiz
             </h2>
             <p className="text-xl text-text-secondary mb-10 font-light max-w-2xl mx-auto">
-              So'rov qoldiring va mutaxassisimiz sizga{" "}
-              <span className="text-brand font-medium">10 daqiqa ichida</span>{" "}
-              eng zo'r taklifni beradi.
+              So'rov qoldiring — <span className="text-brand font-medium">10 daqiqa ichida</span> aniq narx va muddatni olasiz
             </p>
             <Button
               variant="primary"
